@@ -1,12 +1,89 @@
 
-GameInfo = {
+gameInfo = {
     ["Name"] = "Chess",
     ["Version"] = "0.0.1",
+    ["Creators"] = {"Bertie","Zaine"}
 }
 
-function Main()
-    print("Chess. Yeah. You lose your a failure. ")
-
-end
-
-Main()
+defaultSetup = {
+    [1] = {
+        ["a"] = "black rook",
+        ["b"] = "black knight",
+        ["c"] = "black bishop",
+        ["d"] = "black queen",
+        ["e"] = "black king",
+        ["f"] = "black bishop",
+        ["g"] = "black knight",
+        ["h"] = "black rook",
+    },
+    [2] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [3] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [4] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [5] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [6] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [7] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [8] = {
+        ["a"] = "white rook",
+        ["b"] = "white knight",
+        ["c"] = "white bishop",
+        ["d"] = "white queen",
+        ["e"] = "white king",
+        ["f"] = "white bishop",
+        ["g"] = "white knight",
+        ["h"] = "white rook",
+    },
+}
