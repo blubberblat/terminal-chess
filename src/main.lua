@@ -4,9 +4,8 @@ GameInfo = {
     ["Version"] = "0.0.1",
 }
 
-function Main() 
-
-    
+function Main()
+    print("Chess. Yeah. You lose your a failure. ")
 
 end
 
