@@ -1,10 +1,10 @@
-gameInfo = {
+local gameInfo = {
     ["Name"] = "Chess",
     ["Version"] = "0.0.1",
     ["Creators"] = {"Bertie","Zaine"}
 }
 
-defaultSetup = {
+local defaultSetup = {
     [1] = {
         ["a"] = "black rook",
         ["b"] = "black knight",
@@ -87,7 +87,7 @@ defaultSetup = {
     },
 }
 
-funkyTestSetup = {
+local funkyTestSetup = {
     [1] = {
         ["a"] = "black knight",
         ["b"] = "black bishop",
@@ -169,3 +169,4 @@ funkyTestSetup = {
         ["h"] = "white knight",
     },
 }
+return gameInfo,defaultSetup,funkyTestSetup

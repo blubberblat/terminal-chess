@@ -1,3 +1,5 @@
+board = require("board.lua")
+
 function convert(str) do
 	local converted = {}
 	for i in string.gmatch(str,"%a+") do
@@ -10,5 +12,14 @@ function convert(str) do
 	return reStr
 	end
 end
+
+function showBoard() do
+    for i,v in currentBoard do
+        io.write(v)
+    end
+end
+end
+
+currentBoard = board.defaultSetup
 
 print(string.upper(convert("white queen")))
