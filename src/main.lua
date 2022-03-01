@@ -5,7 +5,7 @@ function convert(str) do
 	end
 	local reStr = ""
 	for v,i in pairs(converted) do
-		reStr = reStr .. string.sub(i,1,1)
+		reStr = reStr .. string.upper(string.sub(i,1,1))
 	end
 	return reStr
 	end
