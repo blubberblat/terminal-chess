@@ -1,5 +1,7 @@
 board = require("board.lua")
 
+currentSetup = board.defaultSeup
+
 function convert(str) do
 	local converted = {}
 	for i in string.gmatch(str,"%a+") do
@@ -7,19 +9,29 @@ function convert(str) do
 	end
 	local reStr = ""
 	for v,i in pairs(converted) do
-		reStr = reStr .. string.upper(string.sub(i,1,1))
+		reStr = reStr .. string.sub(i,1,1)
 	end
 	return reStr
 	end
 end
 
 function showBoard() do
-    for i,v in currentBoard do
-        io.write(v)
-    end
+	letters = {"a","b","c","d","e","f","g","h"}
+	for i=1, 8 do
+		if currentBoard[num]["a"] then
+			if (i%2 == 0) then
+				io.write(" "..currentBoard[num]["a"].." ")
+			else 
+				io.write("█"..currentBoard[num]["a"].."█")
+			end
+		else 
+			if i%2 == 0 then
+				io.write("    ")
+			else
+				io.write("████")
+			end
+		end
+	end
 end
 end
-
-currentBoard = board.defaultSetup
-
-print(string.upper(convert("white queen")))
+showBoard()
