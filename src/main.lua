@@ -1,4 +1,4 @@
-board = require("board.lua")
+require("board")
 
 currentSetup = board.defaultSeup
 
