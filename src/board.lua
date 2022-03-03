@@ -169,4 +169,3 @@ local funkyTestSetup = {
         ["h"] = "white knight",
     },
 }
-return gameInfo,defaultSetup,funkyTestSetup

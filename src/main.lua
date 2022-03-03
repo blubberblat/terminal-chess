@@ -1,6 +1,6 @@
 require("board")
 
-currentSetup = board.defaultSeup
+currentSetup = board.defaultSetup
 
 function convert(str) do
 	local converted = {}
