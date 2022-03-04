@@ -1,6 +1,175 @@
-require("board")
+local gameInfo = {
+    ["Name"] = "Chess",
+    ["Version"] = "0.0.1",
+    ["Creators"] = {"Bertie","Zaine"}
+}
 
-currentSetup = board.defaultSetup
+local defaultSetup = {
+    [1] = {
+        ["a"] = "black rook",
+        ["b"] = "black knight",
+        ["c"] = "black bishop",
+        ["d"] = "black queen",
+        ["e"] = "black king",
+        ["f"] = "black bishop",
+        ["g"] = "black knight",
+        ["h"] = "black rook",
+    },
+    [2] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [3] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [4] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [5] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [6] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [7] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [8] = {
+        ["a"] = "white rook",
+        ["b"] = "white knight",
+        ["c"] = "white bishop",
+        ["d"] = "white queen",
+        ["e"] = "white king",
+        ["f"] = "white bishop",
+        ["g"] = "white knight",
+        ["h"] = "white rook",
+    },
+}
+
+local funkyTestSetup = {
+    [1] = {
+        ["a"] = "black knight",
+        ["b"] = "black bishop",
+        ["c"] = "black rook",
+        ["d"] = "black queen",
+        ["e"] = "black king",
+        ["f"] = "black rook",
+        ["g"] = "black bishop",
+        ["h"] = "black knight",
+    },
+    [2] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [3] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [4] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [5] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [6] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [7] = {
+        ["a"] = " ",
+        ["b"] = " ",
+        ["c"] = " ",
+        ["d"] = " ",
+        ["e"] = " ",
+        ["f"] = " ",
+        ["g"] = " ",
+        ["h"] = " ",
+    },
+    [8] = {
+        ["a"] = "white knight",
+        ["b"] = "white bishop",
+        ["c"] = "white rook",
+        ["d"] = "white queen",
+        ["e"] = "white king",
+        ["f"] = "white rook",
+        ["g"] = "white bishop",
+        ["h"] = "white knight",
+    },
+}
+currentBoard = defaultSetup
 
 function convert(str) do
 	local converted = {}
@@ -17,15 +186,15 @@ end
 
 function showBoard() do
 	letters = {"a","b","c","d","e","f","g","h"}
-	for i=1, 8 do
+	for num=1, 8 do
 		if currentBoard[num]["a"] then
-			if (i%2 == 0) then
+			if (num%2 == 0) then
 				io.write(" "..currentBoard[num]["a"].." ")
 			else 
 				io.write("█"..currentBoard[num]["a"].."█")
 			end
 		else 
-			if i%2 == 0 then
+			if num%2 == 0 then
 				io.write("    ")
 			else
 				io.write("████")
