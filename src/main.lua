@@ -90,13 +90,19 @@ function convert(str)
 	end
 	local reStr = ""
 	for v,i in pairs(converted) do
-		reStr = reStr .. string.sub(i,1,1)
+        if i == "knight" then
+            reStr = reStr.."N"
+        elseif string.sub(i,1,1) == "b" or string.sub(i,1,1) == "w" then
+            reStr = reStr..string.sub(i,1,1)
+        else
+		    reStr = reStr..string.upper(string.sub(i,1,1))
+        end
 	end
 	return reStr
 end
 
 function showBoard()
-	letters = {"a","b","c","d","e","f","g","h"}
+	local letters = {"a","b","c","d","e","f","g","h"}
 	for v,x in pairs(letters) do
 		for i=1, 8 do
 			if v%2 == 0 then
